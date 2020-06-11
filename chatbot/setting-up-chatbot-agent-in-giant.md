@@ -37,19 +37,18 @@ You can [refer here](./setting-up-chatbot-agent-in-dialogflow.md) for the steps 
     
    **a) Agent ID**
     
-        i. To get the Agent ID, go to Dialogflow screen and access the agent that you want to link in GIANT.
-        
-   ![access-agent](./images/setting-up-chatbot-agent-in-giant-images/access-agent.png)
+    	i. To get the Agent ID, go to Dialogflow screen and open Network inspector (PRESS F12).
+	
+        ii. Select Network tab > XHR.
+	
+   ![inspect](./images/setting-up-chatbot-agent-in-giant-images/inspect.png)
+	
+        iii. Search the "agents" then you can see the ID in the red box. Choose one
 
-        ii. The Agent ID is available from the Dialogflow’s URL, shown in the browser’s address bar. 
-        E.g. https://console.dialogflow.com/api-client/#/agent/[id]/intents
-		
-   ![get-agent-id](./images/setting-up-chatbot-agent-in-giant-images/get-agent-id.png)
+        iv. Copy the ID from Network inspector into the Agent ID field in GIANT EXCLUDING the “-” available in the original Dialogflow’s Agent ID. For example:
 
-        iii. Copy the Agent ID from the browser’s address bar into the Agent ID field in GIANT EXCLUDING the “-” available in the original Dialogflow’s Agent ID. For example:
-
-			Dialogflow Agent ID: a23dfc353-62df-47f9-bad5-1bd432e0cd33
-			ID to copy into GIANT: a23dfc35362df47f9bad51bd432e0cd33
+			Dialogflow Agent ID: 5f1820b1-3783-4372-8603-ca06c4d59cbd
+			ID to copy into GIANT: 5f1820b1378343728603ca06c4d59cbd
     
    **b) Display Name**
     
@@ -102,11 +101,11 @@ You can [refer here](./setting-up-chatbot-agent-in-dialogflow.md) for the steps 
 
 4. Click on **CREATE** button on the top right.
 
-   ![click-create](./images/setting-up-chatbot-agent-in-giant-images/click-create.png)
+   ![create-new-agent](./images/setting-up-chatbot-agent-in-giant-images/create-new-agent.png)
 
 5. Once your agent is created in GIANT, you will be routed to the agent’s **Setting** screen.
 
-   ![create-giant-agent-successful](./images/setting-up-chatbot-agent-in-giant-images/create-giant-agent-successful.png)
+   ![created-giant-agent-successful](./images/setting-up-chatbot-agent-in-giant-images/created-giant-agent-successful.png)
     
 6. Click on the **INTENTS** tab. You should see a list of intents *exactly* as per the Intents listed in the Dialogflow agent's Intent screen. This indicates that the agent setup is successful.
 
@@ -118,7 +117,7 @@ You can [refer here](./setting-up-chatbot-agent-in-dialogflow.md) for the steps 
 1. Access your GIANT chatbot agent’s **Setting** screen
 2. Scroll down to the section that displays the **Dialogflow webhook URL** information. Copy the URL shown in this field.
 
-   ![copy-webhook-url](./images/setting-up-chatbot-agent-in-giant-images/copy-webhook-url.png)
+   ![dialogflow-webhook-url](./images/setting-up-chatbot-agent-in-giant-images/dialogflow-webhook-url.png)
  
 3. Go to the Dialogflow screen and access the agent that you want to link with GIANT.  
 Click on the **Fulfillment** menu. The Fulfillment main screen will be displayed.
@@ -131,7 +130,7 @@ Click on the **Fulfillment** menu. The Fulfillment main screen will be displayed
 
 5. **Paste the URL** copied from GIANT’s chatbot agent Setting screen in Step 2 into **Dialogflow’s Webhook URL** field.
  
-   ![paste-webhook-url](./images/setting-up-chatbot-agent-in-giant-images/paste-webhook-url.png)
+   ![webhook-url](./images/setting-up-chatbot-agent-in-giant-images/webhook-url.png)
  
 6. Next, go back to GIANT’s chatbot agent **Setting** screen. Click on the **Security** tab.
 
@@ -139,11 +138,11 @@ Click on the **Fulfillment** menu. The Fulfillment main screen will be displayed
 
 7. Click on the **CREATE A PUBLIC ACCESS TOKEN** button. Then, **copy the token** generated in the screen.
 
-   ![create-public-access-token](./images/setting-up-chatbot-agent-in-giant-images/create-public-access-token.png)
+   ![security](./images/setting-up-chatbot-agent-in-giant-images/security.png)
 
 8. Go back to the agent’s **Fulfillment** screen in Dialogflow. Enter the word **“authorization”** in the **HEADERS** field, followed by **“Bearer[space]GIANT Access Token”** copied in Step 7. Scroll down the Fulfillment page and click on **SAVE** button to save the changes made.
 
-   ![save-fulfillment](./images/setting-up-chatbot-agent-in-giant-images/save-fulfillment.png)
+   ![fulfillment-webhook](./images/setting-up-chatbot-agent-in-giant-images/fulfillment-webhook.png)
 
 
 ## 1.3 Linking Intents to GIANT Chatbot Agent
